@@ -11,6 +11,9 @@ const btnScanQR = document.getElementById("btn-scan-qr");
 //lectura desactivada
 let scanning = false;
 
+
+
+
 //funcion para encender la camara
 const encenderCamara = () => {
   navigator.mediaDevices
@@ -61,7 +64,7 @@ const activarSonido = () => {
 //callback cuando termina de leer el codigo QR
 qrcode.callback = (respuesta) => {
   if (respuesta) {
-    //console.log(respuesta);
+    console.log(respuesta);
     let text = "Buena jornada!"
     Swal.fire(text)
     activarSonido();
@@ -74,3 +77,4 @@ qrcode.callback = (respuesta) => {
 window.addEventListener('load', (e) => {
   encenderCamara();
 })
+
