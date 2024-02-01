@@ -50,8 +50,11 @@
     
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required>
-            
-            <button type="submit" onclick="location.href='escanearQr.html'">Iniciar Sesión</button>
+            <input type="text" id="errorUsuario" style="color:#FF0000" value="Error introduciendo numero y password" hidden/>
+            <!-- onclick="location.href='escanearQr.html'"-->
+            <input type="button" onclick="comprobarDatos()" value="Iniciar Sesión" style="background-color: #a6d4a8"/>
         </form>
+        
+        <script src="assets/js/index.js"></script>
     </body>
     </html>
